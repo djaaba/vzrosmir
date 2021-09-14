@@ -1,0 +1,124 @@
+.product {
+  margin-top: 30px; }
+  .product__first-block {
+    display: flex; }
+    .product__first-block__images {
+      width: 720px;
+      margin-right: 40px; }
+      .product__first-block__images__big-image {
+        display: flex;
+        width: 100%;
+        height: 480px;
+        margin-bottom: 20px; }
+        .product__first-block__images__big-image img {
+          object-fit: cover; }
+      .product__first-block__images__items {
+        display: flex;
+        flex-wrap: wrap; }
+        .product__first-block__images__items a {
+          display: flex;
+          width: 160px;
+          height: 107px;
+          margin-right: 20px;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          margin-bottom: 20px;
+          cursor: pointer; }
+          .product__first-block__images__items a img {
+            object-fit: cover; }
+        .product__first-block__images__items .act {
+          border: 1px solid #EF3F54; }
+    .product__first-block__info {
+      width: 50%; }
+      .product__first-block__info .spec_info {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 12px;
+        letter-spacing: 0.05em;
+        color: #E68019;
+        display: block;
+        margin-bottom: 20px; }
+      .product__first-block__info__title {
+        margin-bottom: 30px;
+        display: flex; }
+        .product__first-block__info__title h1 {
+          margin-bottom: 0px;
+          width: 80%;
+          font-size: 48px;
+          line-height: 60px; }
+        .product__first-block__info__title .favorite {
+          display: flex;
+          width: 55px; }
+          .product__first-block__info__title .favorite__icon {
+            display: flex;
+            width: 55px;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-top: 2px; }
+            .product__first-block__info__title .favorite__icon__line {
+              stroke-width: 35;
+              stroke: #EF3F54;
+              fill: transparent; }
+            .product__first-block__info__title .favorite__icon svg {
+              width: 35px;
+              height: 30px;
+              margin-top: 1px; }
+            .product__first-block__info__title .favorite__icon:hover .favorite__icon__line {
+              stroke: #EF3F54;
+              fill: #EF3F54; }
+            .product__first-block__info__title .favorite__icon:hover {
+              background: #fff; }
+      .product__first-block__info .sklad {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 12px;
+        letter-spacing: 0.05em;
+        color: #FEFEFE;
+        margin: 30px 0; }
+        .product__first-block__info .sklad a {
+          color: #EF3F54;
+          border-bottom: 1px dashed #EF3F54;
+          cursor: pointer;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 12px;
+          letter-spacing: 0.05em; }
+          .product__first-block__info .sklad a:hover {
+            border: none; }
+      .product__first-block__info .sklad__table {
+        width: 100%;
+        display: none;
+        margin-bottom: 30px; }
+        .product__first-block__info .sklad__table td {
+          padding: 10px 15px;
+          border-top: 1px dashed #fff;
+          color: #fff; }
+          .product__first-block__info .sklad__table td span {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            padding: 5px 10px;
+            border-radius: 2px; }
+          .product__first-block__info .sklad__table td .nal {
+            background: #107154; }
+          .product__first-block__info .sklad__table td .no-nal {
+            background: #808A9D; }
+        .product__first-block__info .sklad__table .col-1 {
+          padding-left: 0px;
+          text-align: left; }
+        .product__first-block__info .sklad__table .col-2 {
+          text-align: left; }
+        .product__first-block__info .sklad__table .col-3 {
+          padding-right: 0px;
+          text-align: right; }
+        .product__first-block__info .sklad__table thead td {
+          border: none;
+          font-size: 20px;
+          color: #ef3f54;
+          padding-top: 0px; }
+      .product__first-block__info .open {
+        display: table; }

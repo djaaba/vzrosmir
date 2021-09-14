@@ -1,0 +1,33 @@
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+DirectoryIndex index.php
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteCond %{SERVER_NAME} !.sand$
+RewriteCond %{SERVER_NAME} !.sand.info-telecom.com$
+RewriteCond %{SERVER_NAME} !.itc$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+RewriteCond %{REQUEST_URI} ^(.*)@([0-9]*)\.js$
+RewriteRule ^(.*)@([0-9]*)\.js$ $1.js
+
+RewriteCond %{REQUEST_URI} ^(.*)@([0-9]*)\.css$
+RewriteRule ^(.*)@([0-9]*)\.css$ $1.css
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?|@]*)$ /index.php?http_request=$1 [QSA,L]

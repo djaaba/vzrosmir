@@ -1,0 +1,169 @@
+.slider-section {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between; }
+  .slider-section .main-slider {
+    width: 75%;
+    min-height: 550px; }
+    .slider-section .main-slider .slick-dots {
+      bottom: -40px; }
+      .slider-section .main-slider .slick-dots li {
+        position: relative;
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        margin: 0 8px;
+        padding: 0;
+        cursor: pointer; }
+        .slider-section .main-slider .slick-dots li button {
+          background: #5E697D;
+          opacity: 1;
+          font-size: 25px;
+          line-height: 26px;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%; }
+          .slider-section .main-slider .slick-dots li button:before {
+            content: none; }
+      .slider-section .main-slider .slick-dots .slick-active button {
+        background: #2682EB; }
+    .slider-section .main-slider .slick-prev, .slider-section .main-slider .slick-next {
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      background: rgba(255, 255, 255, 0.3);
+      justify-content: center;
+      align-items: center; }
+      .slider-section .main-slider .slick-prev:hover, .slider-section .main-slider .slick-next:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.7); }
+      .slider-section .main-slider .slick-prev:before, .slider-section .main-slider .slick-next:before {
+        content: " ";
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #161922;
+        border-right: 2px solid #161922;
+        display: block; }
+    .slider-section .main-slider .slick-prev {
+      left: 0; }
+      .slider-section .main-slider .slick-prev:before {
+        transform: rotate(-130deg); }
+    .slider-section .main-slider .slick-next {
+      right: 0; }
+      .slider-section .main-slider .slick-next:before {
+        transform: rotate(45deg); }
+    .slider-section .main-slider .slick-list {
+      height: 100%; }
+      .slider-section .main-slider .slick-list .slick-track {
+        height: 100%; }
+        .slider-section .main-slider .slick-list .slick-track .slick-slide div {
+          height: 100%; }
+    .slider-section .main-slider__item {
+      display: block;
+      height: 100%;
+      padding: 50px 60px;
+      display: flex !important;
+      align-items: flex-end; }
+      .slider-section .main-slider__item__info-block {
+        height: auto !important; }
+        .slider-section .main-slider__item__info-block .exclusive {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 14px;
+          letter-spacing: 0.05em;
+          color: #FEFEFE;
+          border-radius: 2px;
+          padding: 5px 8px; }
+        .slider-section .main-slider__item__info-block h3 {
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 48px;
+          letter-spacing: 0.05em;
+          color: #FEFEFE;
+          font-family: 'Bebas Neue';
+          margin: 15px 0px; }
+        .slider-section .main-slider__item__info-block__price {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 30px; }
+          .slider-section .main-slider__item__info-block__price .current {
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 0.05em;
+            color: #FEFEFE;
+            font-family: 'Bebas Neue';
+            font-weight: 300;
+            margin-right: 15px; }
+          .slider-section .main-slider__item__info-block__price .old {
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            color: #A9AFBC;
+            font-family: 'Bebas Neue';
+            font-weight: 300;
+            text-decoration: line-through; }
+        .slider-section .main-slider__item__info-block__link {
+          background: #EF3F54;
+          border-radius: 4px;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0.05em;
+          color: #FFFFFF;
+          padding: 6px 18px; }
+          .slider-section .main-slider__item__info-block__link:hover {
+            background: #3F4655;
+            color: #5E697D;
+            cursor: pointer; }
+  .slider-section .banner-zone {
+    margin-left: 30px;
+    width: 100%;
+    margin-top: -3px; }
+    .slider-section .banner-zone__block {
+      height: 260px;
+      width: 100%; }
+      .slider-section .banner-zone__block a {
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        padding: 30px 20px;
+        padding-right: 10px;
+        text-decoration: none;
+        color: #fff; }
+        .slider-section .banner-zone__block a h3 {
+          font-family: 'Bebas Neue'; }
+    .slider-section .banner-zone__black {
+      background: #161922 url("http://site.56.utochkin.sand/build/img/zone1.png") no-repeat top right;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      background-size: contain; }
+      .slider-section .banner-zone__black a h3 {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 0.05em; }
+        .slider-section .banner-zone__black a h3 span {
+          font-family: 'Bebas Neue';
+          display: block;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: 0.05em;
+          margin-bottom: 10px; }
+        .slider-section .banner-zone__black a h3 b {
+          font-family: 'Bebas Neue';
+          display: block;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: 0.05em;
+          margin-top: 10px; }
+    .slider-section .banner-zone__orange {
+      background: #E68019 url("http://site.56.utochkin.sand/build/img/zone2.png") no-repeat top right;
+      border-radius: 4px;
+      background-size: contain; }
+      .slider-section .banner-zone__orange a h3 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0.05em; }

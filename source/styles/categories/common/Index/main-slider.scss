@@ -1,0 +1,217 @@
+
+.slider-section{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  .main-slider {
+    width: 75%;
+    min-height: 550px;
+
+    .slick-dots {
+      bottom: -40px;
+        li {
+        position: relative;
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        margin: 0 8px;
+        padding: 0;
+        cursor: pointer;
+        button {
+          background: #5E697D;
+          opacity: 1;
+          font-size: 25px;
+          line-height: 26px;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          &:before {
+            content: none;
+          }
+        }
+      }
+      .slick-active button {
+        background: #2682EB;
+      }
+    }
+    .slick-prev, .slick-next {
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      background: rgba(255,255,255,0.3);
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      &:before{
+        content: " ";
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #161922;
+        border-right: 2px solid #161922;
+        display: block;
+      }
+    }
+    .slick-prev{
+
+      left: 0;
+      &:before{
+        transform: rotate(-130deg);
+      }
+    }
+    .slick-next {
+
+      right: 0;
+      &:before{
+        transform: rotate(45deg);
+
+      }
+    }
+    .slick-list{
+      height: 100%;
+      .slick-track{
+        height: 100%;
+        .slick-slide{
+          div{
+            height: 100%;
+          }
+        }
+      }
+    }
+    &__item {
+      display: block;
+      height: 100%;
+      padding: 50px 60px;
+      display: flex !important;
+      align-items: flex-end;
+      &__info-block {
+        height: auto!important;
+      .exclusive {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        color: #FEFEFE;
+        border-radius: 2px;
+        padding: 5px 8px;
+        }
+        h3{
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 48px;
+          letter-spacing: 0.05em;
+          color: #FEFEFE;
+          font-family: 'Bebas Neue';
+          margin: 15px 0px;
+        }
+        &__price{
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 30px;
+          .current{
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 0.05em;
+            color: #FEFEFE;
+            font-family: 'Bebas Neue';
+            font-weight: 300;
+            margin-right: 15px;
+          }
+          .old{
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            color: #A9AFBC;
+            font-family: 'Bebas Neue';
+            font-weight: 300;
+            text-decoration: line-through;
+          }
+        }
+        &__link{
+          background: #EF3F54;
+          border-radius: 4px;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0.05em;
+          color: #FFFFFF;
+          padding: 6px 18px;
+          &:hover{
+            background: #3F4655;
+            color: #5E697D;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .banner-zone{
+    margin-left: 30px;
+    width: 100%;
+    margin-top: -3px;
+    &__block{
+      height: 260px;
+      width: 100%;
+      a{
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        padding: 30px 20px;
+        padding-right: 10px;
+        text-decoration: none;
+        color:#fff;
+        h3{
+          font-family: 'Bebas Neue';
+        }
+      }
+    }
+    &__black{
+      background: #161922 url('../img/zone1.png') no-repeat  top right;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      background-size: contain;
+      a{
+        h3{
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 48px;
+          letter-spacing: 0.05em;
+          span{
+            font-family: 'Bebas Neue';
+            display: block;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+          }
+          b{
+            font-family: 'Bebas Neue';
+            display: block;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    &__orange{
+      background: #E68019 url('../img/zone2.png') no-repeat top right;
+      border-radius: 4px;
+      background-size: contain;
+      a{
+        h3{
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 36px;
+          letter-spacing: 0.05em;
+
+        }
+      }
+    }
+  }
+}

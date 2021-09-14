@@ -1,0 +1,69 @@
+$full_width: 100%;
+
+@mixin linear-gradient($color1,$color2) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=1, startColorstr=$color1, endColorstr=$color2)"; /* IE 8-9 */
+  background: -webkit-linear-gradient(to right, $color1, $color2); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background: -moz-linear-gradient(to right, $color1, $color2); /* Firefox 3.6-15 */
+  background: -o-linear-gradient(to right, $color1, $color2); /* Opera 11.1-12 */
+  background: linear-gradient(to right, $color1, $color2); /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+}
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+    opacity: 1;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+/*
+blessing of god falls upon us
+ */
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) !important;
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size !important;
+      }
+    }
+  }
+}
+
+/*
+Fluid size [px] : fluid-size(min-window-width,max-window-width,start-size,end-size)
+Ex: right: fluid-size(751,960,-15,-25);
+ */
+@function fluid-size($min-vw, $max-vw, $min-size, $max-size) {
+  @return calc(#{$min-size}px + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-vw}px) / #{strip-unit($max-vw - $min-vw)})) !important;
+}
+
+@function fluid-size-noimp($min-vw, $max-vw, $min-size, $max-size) {
+  @return calc(#{$min-size}px + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-vw}px) / #{strip-unit($max-vw - $min-vw)}));
+}
